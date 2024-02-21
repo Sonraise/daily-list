@@ -1,248 +1,70 @@
-body{
-    margin: 0;                              /*убирает отступы от всех краев*/
-    background-image: url(https://altanschool.s3.eu-central-1.amazonaws.com/learns/1697021662483_headerpic.jpg); /*изображение фона*/
-    background-size: 100%;                  /*размер фона*/
-    background-position-y: -50px;           /*изображение чуть поднято наверх*/
-    background-attachment: fixed;           /*фиксация фона*/
-}
-
-header{
-    height: 100%;               /*высота*/
-    padding: 30px;          /*внутренний отступ*/
-    text-align: right;      /*текст выровнени влево*/
-    color: rgb(0, 0, 91); /*цвет текста*/
-    font-size: 25px;        /*размер текста*/
-}
-
-h1{
-    padding-top: 50px;  /*Дополнительный отступ заголовка*/
-    font-size: 80px;    /*размер заголовка*/
-    color:rgb(255, 255, 255);  /*цвет*/
-}
-
-main{
-    height: 1000px;   /*высота основной части*/
-    display: flex;
-}
-
-footer{
-    height: 100%;    /*высота*/
-    text-align: left;  /*текст выровннен влево*/
-    padding: 50px;   /*внутренний оступ*/
-    color: white;  /*цвет текста*/
-    font-size: 20px;  /*размер текста*/
-}
-
-.social{
-    list-style: none; /*убирает маркеры*/
-    display: flex; /*отображает в ряд*/
-    align-items: left; /*выравнивает иконки по центру внутри каждого пункта*/
-    justify-content: left; /*выравнивает все иконки по центру страницы*/
-    margin: 0;
-    padding: 0;
-}
-
-.social li {
-    padding-left: 10px;
-    padding-top: 20px;
-}
-
-.block1{
-    width: 100%;
-    height: 50%;
-    background-color: yellow;
-    line-height: 30px;
-    background: linear-gradient(to left, yellow, white);
-}
-
-.block2{
-    width: 100%;
-    height: 50%;
-    background-color: blue;
-}
-
-.block3{
-    width: 100%;
-    height: 50%;
-    background-color: red;
-}
-
-.block4{
-    width: 100%;
-    height: 50%;
-    background-color: green;
-}
-
-.block1 li:hover {
-    background-color: green;
-    line-height: 2em;
-
-}
-
-.block1 li{
-    background-color: lightgrey;
-    line-height: 2em;
-    margin-top: 10px;
-    border-radius: 5em;
-    width: 60%;
-    height: 50px;
-    padding-left: 10px;
-}
-
-.nav ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    background-color: white;
-    font-size: 20px;
-    width: 100%;
-    border: 2px solid grey;
-    text-align: center;
-    overflow: hidden;
-}
-
-.nav a{
-    display: block;
-    text-decoration: none;
-    color: grey ;
-    padding: 5px 10px;
-    float: left;
-}
-.nav{
-    position: sticky;
-    top: 0;
-}
-
-.nav a:hover{
-    background-color: wheat;
-    color: black;
-}
-
-.block2 li{
-    background-color: lightblue;
-    line-height: 2em;
-    margin-top: 10px;
-    border-radius: 5px;
-    width: 60%;
-    height: 50px;
-    padding-left: 5px;
-    list-style-type: "\1F355";
-    list-style-position: inside;
-    text-align: center;
-}
-
-.block3 li{
-    background-color: lightcoral;
-    line-height: 2em;
-    margin-top: 10px;
-    border-radius: 15em;
-    width: 60%;
-    height: 50px;
-    list-style-position: inside;
-    list-style-type: "\1F354";
-    text-align: center;
-    padding-left: 25px;
-}
-
-.block4 li{
-    background-color: red;
-    line-height: 2em;
-    margin-top: 10px;
-    border-radius: 15em;
-    width: 60%;
-    height: 50px;
-    text-align: center;
-    padding-left: 25px;
-    background: radial-gradient(circle at right, #f42424, #fff700)
-}
-
-.block2 li:hover{
-    background-color: cornflowerblue;
-    color: black;
-    width: 60%;
-    height: 3em;
-}
-
-.block3 li:hover{
-    background-color: cornsilk;
-    color: black;
-    width: 60%;
-    height: 3em;
-}
-
-.block4 li:hover{
-    background: radial-gradient(circle at right, #243cf4,  #243cf4);
-    color: black;
-    width: 60%;
-    height: 3em;
-}
-
-h1:hover{
-    color: black;
-}
-
-h2:hover{
-    color: orangered;
-}
-
-.block5{
-    width: 100%;
+.anim1{
+    width: 200px;
     height: 300px;
-    padding: 30px;
-    background-color: yellowgreen;
+    background-color: pink;
+    animation-name: Cover;
+    animation-duration: 5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
 }
 
-.btn1{
-    width: 300px;
-    height: 70px;
-    background-color: #fff700;
-    padding: 15px 30px;
+@keyframes Cover{
+    0% { background-color: pink;}
+
+    25% { background-color: blue;}
+
+    50% { background-attachment: green;}
+
+    75% { background-color: red;}
+
+    100% { background-color: yellow;}
+}
+
+.anim1 h1{
     font-size: 30px;
     text-align: left;
-    text-decoration: none;
-    border: none;
-    display: inline;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px black;
-    cursor: pointer;
+    color: white;
+    animation-name: Move;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
 }
 
-.btn1:hover{
-    background-color: blanchedalmond;
-    color: black;
-    border: 2px solid black;
-    box-shadow: 0px 0px 0px black;
+@keyframes Move{
+    from{
+        padding-left: 0%;
+    }
+
+    to{padding-left: 100%;}
 }
 
-.btn1:active{
-    background-color: green;
-    color: yellowgreen;
+.anim2{
+    width: 400px;
+    height: 400px;
+    background-color: black;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+    animation-fill-mode: none;
+    animation-name: Anim;
+    animation-iteration-count: infinite;
 }
 
-.img_button{
-    height: 20px;
-    position: relative;
-}
-.img_button:hover{
-    cursor: grab;
-}
+@keyframes Anim{
+    0% { background-color: pink; width: 400px; height: 400px;}
 
-form{
-    float: right;
-}
+    25% { background-color: blue; }
 
-input{
-    height: 100%;
-    padding: 5px 5px;
-    background-color: gold;
-    color: goldenrod;
-}
+    50% { background-attachment: green;}
 
-.button{
-    background-color: #243cf4;
-}
+    75% { background-color: red;}
 
-.button:hover{
-    background-color: red;
+    100% { background-color: yellow; width: 800px;
+    height: 800px;}
 }
-
